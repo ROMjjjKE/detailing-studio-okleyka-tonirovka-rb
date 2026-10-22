@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Студия детейлинга — оклейка авто плёнкой и тонировка стёкол в РБ</title>
+<meta name="description" content="Детейлинг-студия: оклейка автомобилей винилом, защитной плёнкой и тонировка стёкол. Работаем по всей Беларуси. Чистый бокс, аккуратная работа, запись на расчёт.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oranienbaum&family=Didact+Gothic&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#0E0E10;--pan:#161619;--pan2:#1B1B1F;--line:#26262B;--ivory:#F2EFE9;--mut:#9B968D;--acc:#B76E79;--accH:#9E5A66;--accL:#E8C3C8;--tint:rgba(183,110,121,.13)}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Didact Gothic',Arial,sans-serif;background:var(--bg);color:var(--ivory);font-size:16.5px;line-height:1.65;overflow-x:clip;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+::selection{background:var(--acc);color:#fff}
+.wrap{max-width:1140px;margin:0 auto;padding:0 22px}
+h1,h2,h3{font-family:'Oranienbaum',serif;font-weight:400;letter-spacing:.01em}
+.kick{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--acc);margin-bottom:14px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--acc);color:#fff;font-family:'Didact Gothic',sans-serif;font-weight:600;font-size:15px;letter-spacing:.06em;padding:15px 30px;border-radius:2px;border:none;cursor:pointer;transition:background .2s;text-transform:uppercase}
+.btn:hover{background:var(--accH)}
+.btn-o{background:transparent;border:1px solid var(--line);color:var(--ivory)}
+.btn-o:hover{border-color:var(--acc);color:var(--accL);background:transparent}
+/* шапка */
+header{position:sticky;top:0;z-index:300;background:rgba(14,14,16,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.hrow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:15px 0}
+.logo{display:flex;align-items:center;gap:13px}
+.lq{width:44px;height:44px;border:1px solid var(--acc);display:flex;align-items:center;justify-content:center;color:var(--acc);font-family:'Oranienbaum',serif;font-size:22px}
+.logo b{display:block;font-family:'Oranienbaum',serif;font-size:19px;letter-spacing:.14em;text-transform:uppercase}
+.logo span{font-size:11.5px;color:var(--mut);letter-spacing:.18em;text-transform:uppercase}
+nav.main{display:flex;gap:4px}
+nav.main a{font-size:14px;letter-spacing:.08em;text-transform:uppercase;color:var(--mut);padding:10px 13px;border-radius:2px;transition:.15s}
+nav.main a:hover{color:var(--ivory)}
+.burger{display:none;background:none;border:1px solid var(--line);padding:9px 10px;cursor:pointer}
+.burger span{display:block;width:20px;height:1.5px;background:var(--ivory);margin:4px 0}
+.mnav{position:fixed;inset:0;z-index:950;background:var(--bg);display:none;flex-direction:column;padding:30px;gap:2px}
+.mnav.on{display:flex}
+.mnav .mx{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--ivory);font-size:34px;cursor:pointer}
+.mnav a{font-family:'Oranienbaum',serif;font-size:28px;padding:12px 0;border-bottom:1px solid var(--line)}
+/* hero */
+.hero{padding:110px 0 0;position:relative;overflow:clip;border-bottom:1px solid var(--line)}
+.hero::before{content:'';position:absolute;top:-40%;left:50%;transform:translateX(-50%);width:1400px;height:1000px;background:radial-gradient(ellipse at center,rgba(183,110,121,.14) 0%,transparent 60%);pointer-events:none}
+.hero .wrap{position:relative}
+h1{font-size:clamp(44px,8vw,104px);line-height:1.02;text-transform:uppercase;max-width:900px}
+h1 em{font-style:normal;color:var(--acc)}
+.hsub{font-size:18px;color:var(--mut);max-width:560px;margin-top:22px}
+.hsub b{color:var(--ivory);font-weight:600}
+.hcta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.car{margin-top:64px}
+.car svg{width:100%;height:auto;display:block}
+/* секции */
+section.blk{padding:96px 0;border-bottom:1px solid var(--line)}
+h2{font-size:clamp(30px,4.6vw,56px);line-height:1.06;text-transform:uppercase;max-width:800px}
+.shead{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:end;margin-bottom:44px}
+.snum{font-family:'Oranienbaum',serif;color:var(--acc);font-size:15px;letter-spacing:.3em}
+/* услуги: две широкие строки */
+.svc{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.svbox{background:var(--pan);border:1px solid var(--line);padding:44px 38px;position:relative;overflow:hidden}
+.svbox::after{content:'';position:absolute;top:0;right:0;width:130px;height:130px;background:radial-gradient(circle at top right,var(--tint),transparent 70%)}
+.svbox .num{font-family:'Oranienbaum',serif;font-size:15px;color:var(--acc);letter-spacing:.3em}
+.svbox h3{font-size:clamp(28px,3.4vw,42px);text-transform:uppercase;margin:14px 0 10px}
+.svbox .sub{color:var(--mut);font-size:15.5px;max-width:400px}
+.svlist{margin-top:26px;border-top:1px solid var(--line)}
+.svlist li{list-style:none;display:flex;gap:14px;align-items:baseline;padding:13px 2px;border-bottom:1px solid var(--line);font-size:15px}
+.svlist li i{color:var(--acc);font-style:normal;font-size:12px}
+.svlist li span{color:var(--mut)}
+.svlist li b{color:var(--ivory);font-weight:600}
+.glass{margin-top:26px;display:flex;gap:6px;align-items:flex-end}
+.glass .g{height:52px;border:1px solid var(--line);border-radius:3px 3px 0 0;flex:1}
+.glass .g:nth-child(1){background:rgba(242,239,233,.42)}
+.glass .g:nth-child(2){background:rgba(242,239,233,.28)}
+.glass .g:nth-child(3){background:rgba(242,239,233,.16)}
+.glass .g:nth-child(4){background:rgba(242,239,233,.08)}
+.glass .g:nth-child(5){background:rgba(242,239,233,.04)}
+.glass-cap{font-size:12px;color:var(--mut);letter-spacing:.1em;text-transform:uppercase;margin-top:10px}
+/* этапы */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.stp{border-top:2px solid var(--acc);padding:22px 18px 0}
+.stp .sn{font-family:'Oranienbaum',serif;font-size:44px;color:var(--acc);line-height:1}
+.stp b{display:block;font-family:'Oranienbaum',serif;font-size:21px;text-transform:uppercase;letter-spacing:.04em;margin:14px 0 8px}
+.stp p{font-size:14.5px;color:var(--mut)}
+/* принципы */
+.prin{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.pbox{background:var(--pan);border:1px solid var(--line);padding:26px 28px;display:flex;gap:18px;align-items:flex-start}
+.pbox .pi{width:44px;height:44px;flex:none;border:1px solid var(--acc);border-radius:50%;display:flex;align-items:center;justify-content:center;color:var(--acc);font-family:'Oranienbaum',serif;font-size:18px}
+.pbox b{display:block;font-size:17px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:5px;font-weight:600}
+.pbox p{font-size:14.5px;color:var(--mut)}
+/* faq */
+.faq details{background:var(--pan);border:1px solid var(--line);margin-bottom:10px}
+.faq summary{list-style:none;cursor:pointer;padding:20px 26px;font-family:'Oranienbaum',serif;font-size:20px;letter-spacing:.02em;display:flex;justify-content:space-between;align-items:center;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq .pl{flex:none;width:28px;height:28px;border:1px solid var(--acc);border-radius:50%;color:var(--acc);display:flex;align-items:center;justify-content:center;font-size:18px;font-family:'Didact Gothic';transition:.2s}
+.faq details[open] .pl{background:var(--acc);color:#fff;transform:rotate(45deg)}
+.faq .fa{padding:0 26px 22px;font-size:15px;color:var(--mut);line-height:1.7}
+/* форма */
+.fgrid{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
+.fnote{font-size:15px;color:var(--mut);max-width:420px;margin-top:8px}
+.fnote b{color:var(--ivory)}
+form{background:var(--pan);border:1px solid var(--line);padding:38px;display:grid;gap:14px}
+form label{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--mut);display:block;margin-bottom:7px}
+form input,form select,form textarea{width:100%;background:var(--bg);border:1px solid var(--line);color:var(--ivory);font-family:'Didact Gothic',sans-serif;font-size:15.5px;padding:14px 16px;outline:none;border-radius:2px;transition:border-color .2s}
+form input:focus,form select:focus,form textarea:focus{border-color:var(--acc)}
+form select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23B76E79' stroke-width='2' fill='none'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 16px center}
+form textarea{min-height:88px;resize:vertical}
+.fok{display:none;border:1px solid var(--acc);background:var(--tint);color:var(--accL);padding:14px 18px;font-size:15px}
+/* контакты */
+#contacts{text-align:center;padding:110px 0}
+.tel{font-family:'Oranienbaum',serif;font-size:clamp(34px,6vw,72px);letter-spacing:.04em;color:var(--acc);display:block;margin-top:22px}
+.cty{color:var(--mut);font-size:15px;letter-spacing:.2em;text-transform:uppercase;margin-top:14px}
+/* футер */
+footer{border-top:1px solid var(--line);padding:22px 0;font-size:13px;color:var(--mut)}
+.ft{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+/* fab + watermark */
+.fab{position:fixed;right:18px;bottom:18px;z-index:9400}
+.fab a,.fab button{display:flex;align-items:center;gap:9px;background:var(--acc);color:#fff;font-family:'Didact Gothic';font-weight:600;font-size:14px;letter-spacing:.06em;padding:14px 22px;border-radius:2px;box-shadow:0 10px 30px rgba(0,0,0,.4);text-transform:uppercase;border:none;cursor:pointer}
+.fab a:hover{background:var(--accH)}
+.wm{position:fixed;inset:0;z-index:9390;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='460' height='300'%3E%3Ctext x='40' y='150' font-size='26' fill='%23FFFFFF' opacity='.045' font-family='monospace' transform='rotate(-24 40 150)'%3ESiteFast.by%3C/text%3E%3C/svg%3E")}
+.wbadge{position:fixed;left:14px;bottom:14px;z-index:9600;background:var(--pan2);color:var(--mut);border:1px solid var(--line);font:400 11px 'Didact Gothic',sans-serif;letter-spacing:.08em;padding:7px 10px}
+@media(max-width:1020px){
+ nav.main{display:none}.burger{display:block}
+ .svc,.prin,.fgrid{grid-template-columns:1fr}
+ .steps{grid-template-columns:repeat(2,1fr)}
+ .shead{grid-template-columns:1fr}
+}
+@media(max-width:640px){
+ .hcta .btn-o{display:none}
+ .steps{grid-template-columns:1fr}
+ form{padding:26px}
+ .svbox{padding:30px 22px}
+}
+</style>
+</head>
+<body>
+<div class="wm"></div>
+<div class="wbadge">МАКЕТ: SITEFast.by</div>
+<header>
+ <div class="wrap hrow">
+  <a href="#top" class="logo"><div class="lq">D</div><div><b>Детейлинг</b><span>оклейка · тонировка · РБ</span></div></a>
+  <nav class="main">
+   <a href="#uslugi">Услуги</a>
+   <a href="#etapy">Этапы</a>
+   <a href="#printsipy">Принципы</a>
+   <a href="#voprosy">Вопросы</a>
+   <a href="#zayavka">Записаться</a>
+  </nav>
+  <a class="btn" href="#zayavka" style="padding:12px 22px;font-size:13px">Оставить заявку</a>
+  <button class="burger" id="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+ </div>
+</header>
+<div class="mnav" id="mnav">
+ <button class="mx" id="mx" aria-label="Закрыть">×</button>
+ <a href="#uslugi">Услуги</a><a href="#etapy">Этапы</a><a href="#printsipy">Принципы</a><a href="#voprosy">Вопросы</a><a href="#zayavka">Записаться</a>
+</div>
+
+<main id="top">
+<section class="hero">
+ <div class="wrap">
+  <div class="kick">Студия детейлинга · вся Беларусь</div>
+  <h1>Оклейка и <em>тонировка</em> автомобилей</h1>
+  <p class="hsub">Меняем цвет кузова винилом, защищаем лак защитной плёнкой, затемняем стёкла. Работаем <b>по всей РБ</b>, в чистом закрытом боксе — без спешки и следов.</p>
+  <div class="hcta">
+   <a class="btn" href="#zayavka">Записаться на расчёт</a>
+   <a class="btn btn-o" href="#uslugi">Что мы делаем</a>
+  </div>
+  <div class="car" aria-hidden="true">
+   <svg viewBox="0 0 1100 300" fill="none">
+    <defs><linearGradient id="body" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232327"/><stop offset="1" stop-color="#131316"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#B76E79" stop-opacity="0"/><stop offset=".45" stop-color="#B76E79" stop-opacity=".9"/><stop offset="1" stop-color="#B76E79" stop-opacity="0"/>
+    </linearGradient></defs>
+    <path d="M60 218 q40 -8 96 -30 q60 -26 150 -34 q84 -52 190 -58 q150 -8 250 26 q70 22 150 34 q66 10 122 24 l26 12 q14 8 14 26 l-14 10 -998 0 -10 -12 0 -22 z" fill="url(#body)" stroke="#2E2E34" stroke-width="1.5"/>
+    <path d="M170 158 q56 -22 120 -28 l40 -2 q30 0 60 8 l44 22 -250 12 z" fill="#0B0B0D" stroke="#2E2E34"/>
+    <path d="M460 132 q90 -6 150 14 l24 10 -190 4 -12 -18 z" fill="#0B0B0D" stroke="#2E2E34"/>
+    <path d="M64 206 h980" stroke="url(#shine)" stroke-width="3" opacity=".55"/>
+    <circle cx="290" cy="228" r="46" fill="#0B0B0D" stroke="#2E2E34" stroke-width="2"/>
+    <circle cx="290" cy="228" r="28" fill="#151518" stroke="#3A3A41" stroke-width="1.5"/>
+    <circle cx="290" cy="228" r="9" fill="#B76E79" opacity=".85"/>
+    <circle cx="830" cy="228" r="46" fill="#0B0B0D" stroke="#2E2E34" stroke-width="2"/>
+    <circle cx="830" cy="228" r="28" fill="#151518" stroke="#3A3A41" stroke-width="1.5"/>
+    <circle cx="830" cy="228" r="9" fill="#B76E79" opacity=".85"/>
+    <rect x="700" y="196" width="46" height="10" rx="2" fill="#B76E79" opacity=".3"/>
+    <rect x="180" y="196" width="46" height="10" rx="2" fill="#B76E79" opacity=".3"/>
+    <rect x="0" y="286" width="1100" height="1.5" fill="#26262B"/>
+   </svg>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="uslugi">
+ <div class="wrap">
+  <div class="shead"><div><div class="kick">01 — Услуги</div><h2>Что мы делаем</h2></div><span class="snum">ОКЛЕЙКА · ТОНИРОВКА</span></div>
+  <div class="svc">
+   <div class="svbox">
+    <span class="num">УСЛУГА 01</span>
+    <h3>Оклейка плёнкой</h3>
+    <p class="sub">Обновляем внешний вид авто: от смены цвета до защиты лака от сколов и пескоструя.</p>
+    <ul class="svlist">
+     <li><i>—</i><span><b>Цветная виниловая плёнка.</b> Глянец, мат, сатин, металлик — кузов выглядит как новый.</span></li>
+     <li><i>—</i><span><b>Защитная плёнка.</b> Бережёт лак от сколов, царапин и реагентов, невидима на кузове.</span></li>
+     <li><i>—</i><span><b>Частичная оклейка.</b> Капот, крыша, зеркала, стойки — только то, что просит защита.</span></li>
+    </ul>
+   </div>
+   <div class="svbox">
+    <span class="num">УСЛУГА 02</span>
+    <h3>Тонировка стёкол</h3>
+    <p class="sub">Затемняем стёкла под ваш запрос — комфорт летом, приватность и аккуратный вид авто.</p>
+    <div class="glass" aria-hidden="true"><div class="g"></div><div class="g"></div><div class="g"></div><div class="g"></div><div class="g"></div></div>
+    <div class="glass-cap">варианты затемнения — подберём под ваш авто</div>
+    <ul class="svlist">
+     <li><i>—</i><span><b>Классическая тонировка.</b> Ровный слой без пузырей, с подгонкой под нормы светопропускания.</span></li>
+     <li><i>—</i><span><b>Атермальная плёнка.</b> Меньше жары и выгорания салона, салону комфортно летом.</span></li>
+     <li><i>—</i><span><b>Съём стёкол.</b> Клеим под край стекла — без зазоров и огрехов по кромке.</span></li>
+    </ul>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="etapy">
+ <div class="wrap">
+  <div class="shead"><div><div class="kick">02 — Этапы</div><h2>Как проходит работа</h2></div><span class="snum">ОТ ЗАЯВКИ ДО ВЫДАЧИ</span></div>
+  <div class="steps">
+   <div class="stp"><div class="sn">I</div><b>Заявка</b><p>Оставляете заявку — уточняем авто, пожелания по плёнке и записываем на расчёт.</p></div>
+   <div class="stp"><div class="sn">II</div><b>Расчёт</b><p>Осматриваем кузов и стёкла, подбираем материал и называем точную стоимость и срок.</p></div>
+   <div class="stp"><div class="sn">III</div><b>Работа</b><p>Моем, разбираем нужные элементы, клеим в чистом боксе — без пыли под плёнкой.</p></div>
+   <div class="stp"><div class="sn">IV</div><b>Выдача</b><p>Проверяем результат вместе с вами на свету и отдаём автомобиль ухоженным.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="printsipy">
+ <div class="wrap">
+  <div class="shead"><div><div class="kick">03 — Принципы</div><h2>Почему к нам возвращаются</h2></div><span class="snum">АККУРАТНОСТЬ ПРЕЖДЕ ВСЕГО</span></div>
+  <div class="prin">
+   <div class="pbox"><div class="pi">01</div><div><b>Чистый закрытый бокс</b><p>Оклейка только в подготовленном помещении: ни пылинки под плёнкой, ни спешки на улице.</p></div></div>
+   <div class="pbox"><div class="pi">02</div><div><b>Съём элементов, а не «натянуть поверх»</b><p>Бампера, ручки, фонари и зеркала снимаем, чтобы плёнка легла под каждый край без огрехов.</p></div></div>
+   <div class="pbox"><div class="pi">03</div><div><b>Раскройка под конкретный кузов</b><p>Материал кроится под вашу модель, а не режется «на глаз» прямо на машине.</p></div></div>
+   <div class="pbox"><div class="pi">04</div><div><b>Финишный осмотр на свету</b><p>Перед выдачей проверяем каждый сантиметр кромки — вы принимаете работу лично.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="voprosy">
+ <div class="wrap">
+  <div class="shead"><div><div class="kick">04 — Вопросы</div><h2>Что спрашивают перед записью</h2></div><span class="snum">FAQ</span></div>
+  <div class="faq">
+   <details><summary>Сколько стоит оклейка или тонировка?<span class="pl">+</span></summary><div class="fa">Стоимость зависит от автомобиля, объёма работ и выбранного материала. Пришлите заявку с маркой авто — рассчитаем и назовём точную сумму до начала работ.</div></details>
+   <details><summary>Сколько времени занимает работа?<span class="pl">+</span></summary><div class="fa">Тонировка обычно за один день. Оклейка зависит от объёма: частичная защита — от пары дней, полный кузов — дольше. Точный срок называем на расчёте.</div></details>
+   <details><summary>Тонировка законна ли в РБ?<span class="pl">+</span></summary><div class="fa">Да, если соблюдены нормы светопропускания. Мы подбираем плёнку с учётом требований — и подскажем, какой вариант допустим для вашего авто.</div></details>
+   <details><summary>Вы работаете только в одном городе?<span class="pl">+</span></summary><div class="fa">Студия принимает автомобили со всей Беларуси: договоримся об удобном времени записи — приезжайте к нам, остальные вопросы решаем по телефону.</div></details>
+   <details><summary>Как записаться?<span class="pl">+</span></summary><div class="fa">Заполните форму ниже или позвоните — уточним свободные даты и подберём материал под ваш запрос.</div></details>
+  </div>
+ </div>
+</section>
+
+<section class="blk" id="zayavka">
+ <div class="wrap">
+  <div class="fgrid">
+   <div>
+    <div class="kick">05 — Заявка</div>
+    <h2>Запишитесь на расчёт</h2>
+    <p class="fnote">Расскажите про авто и желаемую услугу — <b>перезвоним, подберём материал</b> и назовём точную стоимость до начала работ.</p>
+   </div>
+   <form id="cform" novalidate>
+    <div>
+     <label for="f-svc">Услуга</label>
+     <select id="f-svc" name="svc">
+      <option>Оклейка кузова винилом</option>
+      <option>Защитная плёнка</option>
+      <option>Тонировка стёкол</option>
+      <option>Атермальная тонировка</option>
+      <option>Пока не знаю — нужна консультация</option>
+     </select>
+    </div>
+    <div><label for="f-car">Автомобиль</label><input id="f-car" name="car" placeholder="Марка и модель, год"></div>
+    <div><label for="f-name">Ваше имя</label><input id="f-name" name="name" required placeholder="Как к вам обращаться"></div>
+    <div><label for="f-tel">Телефон</label><input id="f-tel" name="tel" required placeholder="+375 __ ___-__-__"></div>
+    <button class="btn" type="submit" style="width:100%">Отправить заявку</button>
+    <div class="fok" id="fok">Спасибо! Заявка принята — перезвоним в ближайшее время.</div>
+   </form>
+  </div>
+ </div>
+</section>
+
+<section id="contacts">
+ <div class="wrap">
+  <div class="kick" style="margin-bottom:20px">Контакты</div>
+  <h2 style="margin:0 auto">Студия детейлинга — РБ</h2>
+  <span class="tel">+375 (00) 000-00-00</span>
+  <div class="cty">Номер появится при запуске · запись через форму выше</div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap ft">
+  <span>© 2026 Студия детейлинга · оклейка и тонировка · вся Беларусь</span>
+  <span>Макет: SiteFast.by</span>
+ </div>
+</footer>
+
+<div class="fab"><a href="#zayavka">Оставить заявку</a></div>
+
+<script>
+(function(){
+ var b=document.getElementById('burger'),m=document.getElementById('mnav');
+ b.addEventListener('click',function(){m.classList.add('on')});
+ document.getElementById('mx').addEventListener('click',function(){m.classList.remove('on')});
+ m.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){m.classList.remove('on')})});
+ var f=document.getElementById('cform');
+ f.addEventListener('submit',function(e){
+  e.preventDefault();
+  var ok=true;
+  ['name','tel'].forEach(function(n){
+   var el=f.querySelector('[name='+n+']');
+   if(!el.value.trim()){ok=false;el.style.borderColor='#B76E79';}
+   else el.style.borderColor='';
+  });
+  if(!ok)return;
+  document.getElementById('fok').style.display='block';
+  f.reset();
+ });
+})();
+</script>
+</body>
+</html>
