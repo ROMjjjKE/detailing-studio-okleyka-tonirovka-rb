@@ -36,18 +36,18 @@ h1,h2,h3,.dsp{font-family:'Russo One',sans-serif;font-weight:400}
 @keyframes preFill{to{width:100%}}
 .pre-cap{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:var(--mut)}
 /* шапка */
-header{position:sticky;top:0;z-index:300;background:rgba(10,10,11,.9);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+header{position:sticky;top:0;z-index:300;background:rgba(248,248,249,.94);backdrop-filter:blur(12px);border-bottom:1px solid #E3E3E6}
 .hrow{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px 0}
 .logo{display:flex;align-items:center;gap:14px}
 .lgimg{height:46px;width:auto;display:block}
-.logo .lgt{border-left:1px solid var(--line);padding-left:14px}
-.logo .lgt b{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#fff;line-height:1.2}
-.logo .lgt span{font-size:10.5px;color:var(--mut);letter-spacing:.16em;text-transform:uppercase}
+.logo .lgt{border-left:1px solid #D9D9DE;padding-left:14px}
+.logo .lgt b{display:block;font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:#0A0A0B;line-height:1.2}
+.logo .lgt span{font-size:10.5px;color:#6A6A71;letter-spacing:.16em;text-transform:uppercase}
 nav.main{display:flex;gap:2px}
-nav.main a{font-size:14px;font-weight:500;color:var(--mut);padding:10px 14px;border-radius:9px;transition:.15s}
-nav.main a:hover{color:var(--ink);background:var(--pan2)}
-.burger{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:9px 10px;cursor:pointer}
-.burger span{display:block;width:20px;height:2px;background:var(--ink);margin:4px 0}
+nav.main a{font-size:14px;font-weight:500;color:#4A4A52;padding:10px 14px;border-radius:9px;transition:.15s}
+nav.main a:hover{color:#0A0A0B;background:#E9E9EC}
+.burger{display:none;background:none;border:1px solid #D9D9DE;border-radius:9px;padding:9px 10px;cursor:pointer}
+.burger span{display:block;width:20px;height:2px;background:#0A0A0B;margin:4px 0}
 .mnav{position:fixed;inset:0;z-index:950;background:var(--bg);display:none;flex-direction:column;padding:30px;gap:2px}
 .mnav.on{display:flex}
 .mnav .mx{position:absolute;top:20px;right:24px;background:none;border:none;color:var(--ink);font-size:34px;cursor:pointer}
@@ -60,7 +60,7 @@ nav.main a:hover{color:var(--ink);background:var(--pan2)}
 .px.glow3{background:radial-gradient(circle at 60% 40%,rgba(216,28,34,.10),transparent 40%)}
 .px.grid{background-image:linear-gradient(rgba(255,255,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.05) 1px,transparent 1px);background-size:56px 56px;mask-image:radial-gradient(circle at 50% 40%,#000 0%,transparent 72%);-webkit-mask-image:radial-gradient(circle at 50% 40%,#000 0%,transparent 72%)}
 .hero .wrap{position:relative}
-.hero-logo{display:block;height:clamp(88px,13vw,150px);width:auto;margin-bottom:30px;filter:drop-shadow(0 10px 30px rgba(216,28,34,.22))}
+.hero-logo{display:block;height:clamp(88px,13vw,150px);width:auto;margin:0 auto 30px;background:#F6F6F7;padding:16px 26px;border-radius:22px;box-shadow:0 18px 50px rgba(0,0,0,.35)}
 h1{font-size:clamp(40px,6.6vw,88px);line-height:1.03;text-transform:uppercase;max-width:940px;color:var(--ink)}
 h1 em{font-style:normal;background:linear-gradient(180deg,#FFFFFF 6%,#C6C6CE 55%,#8E8E96 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
 .hsub{font-size:18px;color:var(--mut);max-width:600px;margin-top:22px}
@@ -325,7 +325,7 @@ footer{border-top:1px solid var(--line);padding:20px 0;font-size:13px;color:var(
   <a class="tel" href="tel:+375333253858">+375 33 325-38-58</a>
   <div class="cty">Гродно · запись по телефону или через форму</div>
   <div style="display:flex;gap:12px;justify-content:center;margin-top:28px;flex-wrap:wrap"><a class="btn" href="tel:+375333253858">Позвонить</a><a class="btn btn-o" href="https://wa.me/375333253858" target="_blank" rel="noopener">Написать в WhatsApp</a></div>
-  <img src="img-rkn-logo.png" alt="RKN Studio Wrap Zone" style="height:96px;width:auto;margin:44px auto 0;display:block;opacity:.92">
+  <img src="img-rkn-logo.png" alt="RKN Studio Wrap Zone" style="height:96px;width:auto;margin:44px auto 0;display:block;background:#F6F6F7;padding:16px 24px;border-radius:18px">
  </div>
 </section>
 </main>
